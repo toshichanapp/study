@@ -24,7 +24,9 @@
 - CSRF
 
 ### XSS
-#### 概要
+
+#### 原因
+#### 影響
 - cookie
 - session_id
 
@@ -32,7 +34,7 @@
 
 ログインして、プロフィール画面などのhtmlを取得して個人情報引っこ抜ける
 
-## 対策
+#### 対策
 
 ### SQLインジェクション
 #### 概要
@@ -51,6 +53,7 @@ where("campaign->>'name' like ?", "%#{sanitize_sql_like(@params[:campaign_name])
 
 #### 対策
 - ユーザの入力を信じない
+- サニタイズする
 
 
 ### CSRF
