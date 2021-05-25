@@ -18,7 +18,6 @@ def can_be_use_pizza_coupon?(menu_list)
   menu_list.any?{ |name, _num| menu[name][:is_pizza] }
 end
 
-# my_coupons = [500coupon, 200coupon, 100coupon]
 def select_optimum_combination(menu_list, my_coupons)
   # calc_amount
   amount = calc_amount(menu_list)
@@ -54,6 +53,7 @@ class CouponTest < Minitest::Test
 
   def test_1
     menu_list = { genovese_m: 1 }
+    #{ coupon_500: 1, coupon_200: 1, coupon_100: 1, coupon_pizza: 1 }
     my_coupons = [1, 1, 1, 1]
     assert_equal [0, 0, 0, 0], select_optimum_combination(menu_list, my_coupons)
   end
