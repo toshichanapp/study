@@ -161,4 +161,4 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/rubymine,macos,windows
-./vendor/bundle
+vendor/bundle/
